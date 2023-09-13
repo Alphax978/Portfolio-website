@@ -1,0 +1,49 @@
+.contactPage{
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.skillPageTitle{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+
+.skillDesc{
+    font-weight: 300;
+    font-size: 1rem;
+
+}
+
+.skillImgs{
+    margin: 1rem 0;
+    display: flex;
+
+
+
+}
+
+
+.skillImg{
+    object-fit: cover;
+    width: 23%;
+    min-width: 9rem;
+    margin: auto;
+    padding: 0.25;
+
+
+}
+
+.skills{
+    padding: 2rem;
+}
