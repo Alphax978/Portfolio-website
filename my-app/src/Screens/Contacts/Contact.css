@@ -1,4 +1,4 @@
-.contactPage{
+#contactPage{
     min-height: calc(100vh - 4rem);
     width: 100vw;
     max-width: 60rem;
@@ -81,7 +81,21 @@
     border: none;
     border-radius: 0.5rem;
     background: rgb(40,40,40);
+    
 }
+
+input:hover{
+    cursor: pointer;
+    border: 1px solid rgb(111, 111, 23);
+}
+
+
+
+textarea:hover{
+    cursor: pointer;
+    border: 1px solid rgb(111, 111, 23);
+}
+
 
 
 .submitBtn{

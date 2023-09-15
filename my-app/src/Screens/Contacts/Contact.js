@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import "./Contact.css"
 import reactstack from "../../assets/react.png"
 // import sql from "../../assets/mysql.png"
@@ -9,9 +9,24 @@ import facebook from "../../assets/facebook-icon.png"
 import instagram from "../../assets/instagram.png" 
 import git3 from "../../assets/git3.png"  
 import linked2 from "../../assets/linked2.webp"  
+import emailjs from '@emailjs/browser';
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_pb6savr', 'template_08o3gfq', form.current, 'JzrylWBsKdBIcQCGL')
+      .then((result) => {
+        console.log(result.text);
+        e.target.reset()
+        alert("Email Sent")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
-      <section className="contactPage">
+      <section id="contactPage">
           <div className="skills">
               <h1 className="skillPageTitle">
                   My Skills
@@ -26,18 +41,18 @@ const Contact = () => {
                 <img src={figs1} alt="img4" className="skillImg" />    
               </div>
           </div>
-      <div className="contact">
+      <div id="contact">
         <h1 className="skillPageTitle">
           Contact Me
         </h1>
         <span className="contactDesc">
           Please fill out the form below to discuss any work opportunity
         </span>
-        <form className="contactForm" action="">
-          <input type="text" className="name" placeholder='Your Name' />
-          <input type="email" className="email" placeholder='Your Email' />
-          <textarea name="message" id="" rows="5" className="msg" placeholder='Your Message'></textarea>
-          <button type='submit' className="submitBtn" value="send">Submit</button> 
+        <form className="contactForm" ref={form}  onSubmit={sendEmail} >
+          <input type="text" className="name" placeholder='Your Name'name='from_name' />
+          <input type="email" className="email" placeholder='Your Email' name='from_email' />
+          <textarea name="message" id="" rows="5" className="msg" placeholder='Your Message' ></textarea>
+          <button type='submit' className="submitBtn" value="Send">Submit</button> 
           <div className="links">
             <a href='https://www.facebook.com/james.rawal.31/'>
               <img src={facebook} alt="image" className="link" />

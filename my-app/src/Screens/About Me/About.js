@@ -6,7 +6,7 @@ import engs from "../../assets/engs.webp"
 
 const About = () => {
     return (
-        <section className="skills">
+        <section id="skills">
             <span className="skillTitle">What I Offer</span>
             <span className="skilldescription">I have a total of three years of experience in this field. I can offer simple as well as advanced Website designs and can also create a website. I mostly handle the frontend part of the website. I can also contribute to a team if i am working with one. </span>
             <div className="skillBars">

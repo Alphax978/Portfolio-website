@@ -1,10 +1,10 @@
 import React from 'react'
-import "./Work.css"
+import "./Portfolio.css"
 // import p1,P2,p3 from "../../assets"
 
 const Work = () => {
     return (
-        <section className='works'>
+        <section id='works'>
             <h2 className="workstitle">
                 My Portfolio
             </h2>
