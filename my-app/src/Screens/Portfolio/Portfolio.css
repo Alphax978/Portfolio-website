@@ -38,9 +38,10 @@
 }
 
 .worksImg{
-    object-fit: cover;
-    height: 20rem;
+    /* object-fit: cover; */
+    height: 10rem;
     margin: 0.5rem;
+    width: 15rem;
 }
 
 .worksBtn{

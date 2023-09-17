@@ -18,8 +18,9 @@
 
 .logo{
     object-fit: cover;
-    height: 3rem;
-    width: 4rem;
+    height: 9rem;
+    width: 9rem;
+    margin-top: 44px;
 
 }
 
