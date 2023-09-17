@@ -38,9 +38,9 @@
 }
 
 .worksImg{
-    /* object-fit: cover; */
+    object-fit: cover;
     height: 10rem;
-    margin: 0.5rem;
+    margin: 1rem;
     width: 15rem;
 }
 
@@ -60,5 +60,9 @@
     }
 
     
+}
+
+a{
+    color: rgb(106, 106, 12);
 }
 

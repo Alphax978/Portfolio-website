@@ -10,23 +10,44 @@ import instagram from "../../assets/instagram.png"
 import git3 from "../../assets/git3.png"  
 import linked2 from "../../assets/linked2.webp"  
 import emailjs from '@emailjs/browser';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_pb6savr', 'template_08o3gfq', form.current, 'JzrylWBsKdBIcQCGL')
-      .then((result) => {
-        console.log(result.text);
-        e.target.reset()
-        alert("Email Sent")
-      }, (error) => {
+   
+    
+      emailjs.sendForm('service_pb6savr', 'template_08o3gfq', form.current, 'JzrylWBsKdBIcQCGL')
+        .then((result) => {
+          console.log(result.text);
+          e.target.reset()
+          toast.success("Message has been sent", {
+            theme: "dark",
+            autoClose: 4000,
+            pauseOnHover:false,
+            closeOnClick: false,
+            position: 'top-center',
+          })
+        }, (error) => {
           console.log(error.text);
-      });
+          toast.error("Message could not be sent", {
+            theme: "dark",
+            autoClose: 4000,
+            pauseOnHover: false,
+            closeOnClick: false,
+            position:'top-center'
+          })
+        });
+    
+
   };
   return (
-      <section id="contactPage">
+    <section id="contactPage">
+      <ToastContainer/>
           <div className="skills">
               <h1 className="skillPageTitle">
                   My Skills
@@ -49,9 +70,9 @@ const Contact = () => {
           Please fill out the form below to discuss any work opportunity
         </span>
         <form className="contactForm" ref={form}  onSubmit={sendEmail} >
-          <input type="text" className="name" placeholder='Your Name'name='from_name' />
-          <input type="email" className="email" placeholder='Your Email' name='from_email' />
-          <textarea name="message" id="" rows="5" className="msg" placeholder='Your Message' ></textarea>
+          <input type="text" className="name" required="true" placeholder='Your Name'name='from_name' />
+          <input type="email" className="email"  required="true" placeholder='Your Email' name='from_email' />
+          <textarea name="message" required="true" id="" rows="5" className="msg" placeholder='Your Message' ></textarea>
           <button type='submit' className="submitBtn" value="Send">Submit</button> 
           <div className="links">
             <a href='https://www.facebook.com/james.rawal.31/'>
