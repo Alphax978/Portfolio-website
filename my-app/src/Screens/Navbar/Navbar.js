@@ -19,7 +19,6 @@ const Navbar = ({darkthemebutton}) => {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>About Me</Link>
         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>Portfolio</Link>
         <Link activeClass='active' to='contactPage' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>Skills</Link>
-        <Link activeClass='active' to='' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>Misc</Link>
            
       </div>
        
@@ -35,7 +34,6 @@ const Navbar = ({darkthemebutton}) => {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem' onClick={() => setShowMenu(false)}>About Me</Link>
         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem' onClick={() => setShowMenu(false)}>Portfolio</Link>
         <Link activeClass='active' to='contactPage' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem' onClick={() => setShowMenu(false)}>Skills</Link>
-        <Link activeClass='active' to='' spy={true} smooth={true} offset={-50} duration={500} className='ListItem' onClick={() => setShowMenu(false)}>Misc</Link>
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className='ListItem' onClick={() => setShowMenu(false)}>Contact</Link>
       </div>
       <button className='darktheme_button' onClick={darkthemebutton} ><img className='darktheme_logo' src={darktheme} alt="loading" /></button>
