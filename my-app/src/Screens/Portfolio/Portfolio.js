@@ -22,7 +22,7 @@ const Work = () => {
                 <div className="p3"></div>
                 <div className="p4"></div> */}
                 <img src={project1} alt="image2" className="worksImg" />
-                <figcaption>Ecommerce website <span><a href="https://github.com/Alphax978/E_commerce-Frontend">(View Project)</a></span></figcaption>
+                <figcaption>Ecommerce website <span><a href="https://github.com/Alphax978/E_commerce-Frontend"> (View Project)</a></span></figcaption>
                 <img src={project2} alt="image1" className="worksImg" />
                 <figcaption>Weather App <span><a href="https://github.com/Alphax978/Weather-app">(View Project)</a></span></figcaption>
                 <img src={project3} alt="image2" className="worksImg" />

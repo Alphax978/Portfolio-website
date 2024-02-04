@@ -4,17 +4,28 @@ import Navbar from "./Screens/Navbar/Navbar";
 import Work from "./Screens/Portfolio/Portfolio";
 import Contact from "./Screens/Contacts/Contact";
 import Footer from "./Screens/Footer/Footer";
+import {  useState } from "react";
+
+
 
 
 function App() {
+  const [isDark, setIsDark] = useState(true)
+
+  const changetheme = () => {
+    setIsDark(!isDark)
+  }
+
   return (
-      <div className="App">
-        <Navbar />
+    <div style={{
+      backgroundColor: isDark ? 'rgb(30,30,30)' : 'rgb(224,224,224)',
+    }}>
+        <Navbar darkthemebutton={changetheme} />
         <Intro />
-        <About />
+        <About theme={isDark} />
         <Work />
-        <Contact />
-        <Footer />
+        <Contact theme={isDark} />
+        <Footer theme={isDark} />
       </div>
   );
 }

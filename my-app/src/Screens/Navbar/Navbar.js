@@ -4,8 +4,9 @@ import logo from "../../assets/logos.png"
 import Contactimg from "../../assets/contact.png"
 import { Link } from 'react-scroll'
 import menu from "../../assets/menu.png"
+import darktheme from "../../assets/darkthemeicon.png"
 
-const Navbar = () => {
+const Navbar = ({darkthemebutton}) => {
   const [showMenu, setShowMenu] = useState(false)
   return (
     <nav className='navbar'>
@@ -18,8 +19,10 @@ const Navbar = () => {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>About Me</Link>
         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>Portfolio</Link>
         <Link activeClass='active' to='contactPage' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>Skills</Link>
+        <Link activeClass='active' to='' spy={true} smooth={true} offset={-50} duration={500}  className='desktopMenuListItem'>Misc</Link>
            
       </div>
+       
       <button className='desktopMenuBtn' onClick={() => {
         document.getElementById('contact').scrollIntoView({behavior: 'smooth'})
       }} >
@@ -32,9 +35,10 @@ const Navbar = () => {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem' onClick={() => setShowMenu(false)}>About Me</Link>
         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem' onClick={() => setShowMenu(false)}>Portfolio</Link>
         <Link activeClass='active' to='contactPage' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem' onClick={() => setShowMenu(false)}>Skills</Link>
-        <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem' onClick={() => setShowMenu(false)}>Contact</Link>
-           
+        <Link activeClass='active' to='' spy={true} smooth={true} offset={-50} duration={500} className='ListItem' onClick={() => setShowMenu(false)}>Misc</Link>
+        <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className='ListItem' onClick={() => setShowMenu(false)}>Contact</Link>
       </div>
+      <button className='darktheme_button' onClick={darkthemebutton} ><img className='darktheme_logo' src={darktheme} alt="loading" /></button>
     </nav>      
   )
 }

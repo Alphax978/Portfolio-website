@@ -13,7 +13,7 @@ import emailjs from '@emailjs/browser';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const Contact = () => {
+const Contact = ({theme}) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -56,10 +56,22 @@ const Contact = () => {
                   I have got basic to advanced knowledge of the technologies that i have mentioned below. Projects have been created by me through these technologies.
               </p>
               <div className="skillImgs">
-                <img src={reactstack} alt="img1" className="skillImg" />    
-                <img src={Githubs} alt="img2" className="skillImg" />    
-                <img src={nodes} alt="img3" className="skillImg" />    
-                <img src={figs1} alt="img4" className="skillImg" />    
+                  <a href="https://react.dev/" className='skillImg'>
+                    <img src={reactstack} alt="img1" className='skillImg' />    
+            
+                  </a>
+                  <a href="https://docs.github.com/en" className='skillImg'>
+                    <img src={Githubs} alt="img2" className="skillImg" />    
+            
+                  </a>
+                  <a href="https://nodejs.org/docs/latest/api/" className='skillImg'>
+                    <img src={nodes} alt="img3" className="skillImg" />    
+            
+                  </a>
+                  <a href="https://help.figma.com/hc/en-us" className='skillImg'>
+                    <img src={figs1} alt="img4" className="skillImg" />    
+            
+                  </a>
               </div>
           </div>
       <div id="contact">
@@ -70,9 +82,9 @@ const Contact = () => {
           Please fill out the form below to discuss any work opportunity
         </span>
         <form className="contactForm" ref={form}  onSubmit={sendEmail} >
-          <input type="text" className="name" required="true" placeholder='Your Name'name='from_name' />
-          <input type="email" className="email"  required="true" placeholder='Your Email' name='from_email' />
-          <textarea name="message" required="true" id="" rows="5" className="msg" placeholder='Your Message' ></textarea>
+          <input type="text" className="name" style={{ backgroundColor: theme ? 'rgb(40,40,40)' : 'rgb(192,192,192)'}} required="true" placeholder='Your Name'name='from_name' />
+          <input type="email" className="email" style={{ backgroundColor: theme ? 'rgb(40,40,40)' : 'rgb(192,192,192)'}} required="true" placeholder='Your Email' name='from_email' />
+          <textarea name="message" required="true" id="" rows="5" className="msg" style={{ backgroundColor: theme ? 'rgb(40,40,40)' : 'rgb(192,192,192)'}} placeholder='Your Message' ></textarea>
           <button type='submit' className="submitBtn" value="Send">Submit</button> 
           <div className="links">
             <a href='https://www.facebook.com/james.rawal.31/'>

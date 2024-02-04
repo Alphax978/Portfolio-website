@@ -29,9 +29,6 @@
     margin: 1rem 0;
     display: flex;
     flex-wrap: wrap;
-
-
-
 }
 
 
@@ -41,8 +38,6 @@
     min-width: 9rem;
     margin: auto;
     padding: 0.25rem;
-
-
 }
 
 .skills{
@@ -80,7 +75,7 @@
     color: white;
     border: none;
     border-radius: 0.5rem;
-    background: rgb(40,40,40);
+    /* background: rgb(40,40,40); */
     
 }
 
