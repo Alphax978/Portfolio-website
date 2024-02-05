@@ -26,7 +26,6 @@ const steps = [
       { value: 4, label: 'What is level of understanding on the frameworks that you know ?',trigger:'6'},
       { value: 5, label: 'Which Unversity did you graduate from ?',trigger:'7'},
       { value: 6, label: 'Are you available to hire right now ?',trigger:'8'},
-      { value: 7, label: 'close chat',trigger:'9'},
 
     ],
   },
@@ -43,7 +42,7 @@ const steps = [
   },
   {
     id: '5',
-    message: 'I know frameworks like ReactJs, Bootstrap, Tailwindcss. I am also aware of version control like Git. I know Node.js and Figma too.',
+    message: 'I know frameworks like ReactJs, Bootstrap and Tailwind. I am also aware of version control like Git. I know Node and Figma too.',
     trigger:'2'
     
   },
@@ -63,7 +62,6 @@ const steps = [
     id: '8',
     message: 'I am available.',
     trigger:'2'
-    
   },
  
 ];
@@ -81,7 +79,7 @@ const theme = {
 }
 
 const config = {
-  // botAvatar: botavatarjr,
+  botAvatar: botavatarjr,
   floating: true,
 
 };
