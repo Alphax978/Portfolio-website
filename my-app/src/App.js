@@ -65,11 +65,7 @@ const steps = [
     trigger:'2'
     
   },
-  {
-    id:'9',
-    message:'see you again soon',
-    end:true
-  }
+ 
 ];
 
 const theme = {
