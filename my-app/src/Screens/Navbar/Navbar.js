@@ -28,6 +28,7 @@ const Navbar = ({darkthemebutton}) => {
         <img src={Contactimg} alt="" className="desktopMenuImg" /> Contact Me
       </button>
 
+      <button className='darktheme_mobile_button' onClick={darkthemebutton} ><img className='darktheme_mobile_logo' src={darktheme} alt="loading" /></button>
       <img className="mobMenu" src={menu} alt="logo here" onClick={() => setShowMenu(!showMenu)}/>
       <div className="navMenu" style={{display: showMenu ? 'flex' : 'none'}}>
         <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-50} duration={500}  className='ListItem'  onClick={() => setShowMenu(false)}>Home</Link>

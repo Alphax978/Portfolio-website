@@ -69,13 +69,13 @@ const steps = [
 const theme = {
   background: '#f5f8fb',
   fontFamily: 'Helvetica Neue',
-  headerBgColor: '#F9DF0D',
+  headerBgColor: '#D9C208',
   headerFontColor: '#fff',
   headerFontSize: '15px',
-  botBubbleColor: '#F9DF0D',
+  botBubbleColor: '#D9C208',
   botFontColor: '#fff',
   userBubbleColor: '#fff',
-  userFontColor: '#F9DF0D',
+  userFontColor: '#D9C208',
 }
 
 const config = {

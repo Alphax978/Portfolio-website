@@ -83,6 +83,18 @@
     
 }
 
+.darktheme_mobile_button{
+    border: none;
+    margin-left: 80px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+.darktheme_mobile_logo{
+    width: 27px;
+    height: 27px;
+}
+
 .navMenu{
     position: absolute;
     top: 4rem;
@@ -111,13 +123,7 @@
 
 }
 
-/* .darktheme{
-    object-fit: cover;
-    height: 20px;
-    width: 20px;
-    margin-top: 10px;
 
-} */
 
 @media screen and (max-width:720px) {
     .mobMenu{
@@ -129,9 +135,20 @@
     .desktopMenuBtn{
         display: none;
     }
+    .darktheme_button{
+        display: none;
+    }
     
     
 }
+
+@media screen and (min-width: 720px) and (max-width:1920px) {
+    .darktheme_mobile_button{
+        display: none;
+    }
+    
+}
+
 
 
 
